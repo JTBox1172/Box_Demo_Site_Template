@@ -1,14 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import App from "../App";
 import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
-
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Home Page</div>,
+    element: <App />,
   },
+  { path: "/extra-route", element: <div>I'm here for funsies</div> },
 ]);
-
-const root = document.getElementById("root");
-ReactDOM.createRoot(root).render(<RouterProvider router={router} />);
